@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Daily Selfie</string>
+    <string name="btnIntend">Take (big) Picture</string>
+    <string name="btnIntendS">Take (small) Picture</string>
+    <string name="btnIntendV">Take Video</string>
+    <string name="cannot">Cannot</string>
+    <string name="album_name">CameraSample</string>
+    <string name="take_selfie">Take Selfie</string>
+    <string name="action_compose">Compose</string>
+    <string name="no_camera_apps_found">No camera apps found</string>
+    <string name="daily_selfie">Daily Selfie</string>
+    <string name="time_for_selfie">Time for another selfie</string>
+    <string name="camera">Camera</string>
+    <string name="selfie">Selfie Photo</string>
+
+    <string name="sample_time">2:30pm</string>
+    <string name="no_network_connection_toast">No network connection found</string>
+    <string name="no_external_storage">No external storage found</string>
+</resources>

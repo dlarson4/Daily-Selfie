@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="90dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+<!--     <com.course.lab.dailyselfie.gallery.GalleryPickerItem
+        android:id="@+id/thumbnail"
+        android:layout_width="84dip"
+        android:layout_height="84dip"
+        android:scaleType="centerCrop" 
+        android:paddingBottom="9dip"
+        android:paddingLeft="13dip"
+        android:paddingRight="13dip"
+        android:paddingTop="3dip"/> -->
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:scaleType="centerCrop" 
+        android:paddingBottom="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp"
+        android:contentDescription="@string/selfie"/>
+    
+    
+<!--     <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:gravity="top|center_horizontal"
+        android:paddingBottom="9dip"
+        android:paddingLeft="13dip"
+        android:paddingRight="13dip"
+        android:paddingTop="3dip"
+        android:singleLine="true"
+        android:textColor="#ffffffff"
+        android:textSize="14sp" /> -->
+
+</LinearLayout>

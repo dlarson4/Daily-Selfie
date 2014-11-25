@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <GridView
+        android:id="@+id/albums"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:cacheColorHint="#000000"
+        android:columnWidth="90dp"
+        android:drawSelectorOnTop="false"
+        android:listSelector="#000000"
+        android:numColumns="auto_fit"
+        android:paddingTop="2dp"
+        android:verticalSpacing="10dp"
+        android:stretchMode="spacingWidthUniform" />
+    
+<!--         <GridView
+        android:id="@+id/albums"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:cacheColorHint="#000000"
+        android:columnWidth="148dp"
+        android:drawSelectorOnTop="false"
+        android:listSelector="#000000"
+        android:numColumns="auto_fit"
+        android:paddingTop="2dip"
+        android:stretchMode="spacingWidthUniform" /> -->
+
+</RelativeLayout>
