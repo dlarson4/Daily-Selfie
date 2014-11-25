@@ -1,0 +1,8 @@
+gen/
+bin/
+.metadata
+res/layout/test*.xml
+hs_err_pid*.log
+build.properties
+proguard/
+publish/
