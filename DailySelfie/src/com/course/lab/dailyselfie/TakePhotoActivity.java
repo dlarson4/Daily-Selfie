@@ -120,18 +120,45 @@ public class TakePhotoActivity extends Activity
         {
             case ACTION_TAKE_PHOTO:
             {
+                if(Logger.isDebugEnabled())
+                {
+                    Logger.debug("[%s.%s] Result code '%d'", CLASSNAME, "onActivityResult", resultCode);
+                }
                 if(resultCode == RESULT_OK)
                 {
                     handleNewCameraPhoto();
-                    
-                    if(Logger.isDebugEnabled())
-                    {
-                        Logger.debug("[%s.%s] Returning to previous activity", CLASSNAME, "onActivityResult");
-                    }
-                    finish(); // return to previous activity
                 }
+                else if(resultCode == RESULT_CANCELED)
+                {
+                    deleteImageFile();
+                }
+                if(Logger.isDebugEnabled())
+                {
+                    Logger.debug("[%s.%s] Returning to previous activity", CLASSNAME, "onActivityResult");
+                }
+                finish(); // return to previous activity
                 break;
             } 
+        }
+    }
+    
+    private void deleteImageFile()
+    {
+        if(Logger.isDebugEnabled())
+        {
+            Logger.debug("[%s.%s] Attempting to delete '%s'", CLASSNAME, "deleteImageFile", mCurrentPhotoPath);
+        }
+        if(mCurrentPhotoPath != null)
+        {
+            File f = new File(mCurrentPhotoPath);
+            if(f.exists() && f.canWrite())
+            {
+                boolean result = f.delete();
+                if(Logger.isDebugEnabled())
+                {
+                    Logger.debug("[%s.%s] File was deleted? '%b'", CLASSNAME, "deleteImageFile", result);
+                }
+            }
         }
     }
 
