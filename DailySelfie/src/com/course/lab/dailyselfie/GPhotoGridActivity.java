@@ -49,15 +49,6 @@ public class GPhotoGridActivity extends Activity
 
         // Use 1/8th of the available memory for this memory cache.
         final int cacheSize = maxMemory / 8;
-        
-        if(Logger.isDebugEnabled())
-        {
-            final long maxRuntimeMemory = Runtime.getRuntime().maxMemory();
-            final String formattedCacheSize = java.text.NumberFormat.getNumberInstance(java.util.Locale.US).format(cacheSize);
-            Logger.debug("[%s.%s] Runtime max memory = '%d' MB", CLASSNAME, "onCreate", (maxRuntimeMemory/1024/1024));
-            Logger.debug("[%s.%s] Max cache size = '%s' KB", CLASSNAME, "onCreate", formattedCacheSize);
-        }
-
         mMemoryCache = new LruCache<String, Bitmap>(cacheSize)
         {
             @Override
@@ -65,10 +56,6 @@ public class GPhotoGridActivity extends Activity
             {
                 final int bitmapSize = getBitmapSize(bitmap) / 1024;
                 return bitmapSize == 0 ? 1 : bitmapSize;
-
-                // The cache size will be measured in kilobytes rather than
-                // number of items.
-                // return bitmap.getByteCount() / 1024;
             }
         };
     }
